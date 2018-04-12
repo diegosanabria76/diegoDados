@@ -1,5 +1,6 @@
 package com.example.diegosanabriabecerra.diegodados;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -35,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
     public  int diegoYear;
 
 
+    Button entrar;
+
+
+
+
 
 
 
@@ -55,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         ImageView die2Image = (ImageView) findViewById(R.id.die2Image);
         ImageView die3Image = (ImageView) findViewById(R.id.die3Image);
 
+        entrar =(Button) findViewById(R.id.btnIraOtraActividad);
+
         diceImageViews =new ArrayList<ImageView>();
         diceImageViews.add(die1Image);
         diceImageViews.add(die2Image);
@@ -67,14 +75,47 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Diego Sanabria, es un gran programador Android!!!", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+             // Snackbar.make(view, "Diego Sanabria, es un gran programador Android!!!", Snackbar.LENGTH_LONG)
+               //         .setAction("Action", null).show();
+
+                Intent nuevaAct = new Intent(MainActivity.this, second.class);
+
+                startActivity(  nuevaAct  );
+
+
+
     }
 
 
 
         });
+
+        entrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //  String PeruPassword = password.getText().toString();
+                int entry=5;
+                if (entry==5){
+
+                    Intent nuevaAct = new Intent(MainActivity.this, second.class);
+
+                    startActivity(  nuevaAct  );
+
+
+
+
+                }else{
+
+                    Toast.makeText(MainActivity.this, "deberia servir", Toast.LENGTH_LONG).show();//Como Martha Show();
+                }
+
+
+            }
+        });
     }
+
+
+
 
     private void TestGitHub()
     {
