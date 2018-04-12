@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> MyDice_Array;
     ArrayList<ImageView> diceImageViews;
     TextView scoreText;
+    public  int diegoYear;
+
 
 
 
@@ -87,9 +89,10 @@ public class MainActivity extends AppCompatActivity {
         MyDice_Array.add(die2);
         MyDice_Array.add(die3);
 
+
         for (int dieOfSet = 0; dieOfSet < 3; dieOfSet++){
             String imageName = "dado_"+MyDice_Array.get(dieOfSet)+".png";
-
+diegoYear++;
 
             try
             {
